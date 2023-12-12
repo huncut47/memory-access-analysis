@@ -12,7 +12,7 @@ parser.add_argument('-d', '--data', action='store_true', help='data fragmentatio
 parser.add_argument('-i', '--instr', action='store_true', help='instruction fragmentation')
 parser.add_argument('-a', '--all', action='store_true', help='fragmentation for all pages')
 
-def used_pages(file_location, pages_inst, pages_data, pages_total) -> None:
+def used_pages(file_location: str, pages_inst: dict, pages_data: dict, pages_total: dict) -> None:
     with open(file_location, 'r') as file:
         for line in file:
             if line == '#eof\n':
@@ -48,7 +48,7 @@ def used_pages(file_location, pages_inst, pages_data, pages_total) -> None:
                 pages[page_number][offset] = 1
                 pages_total[page_number][offset] = 1
 
-def fragmentation_calculation(output, pages_inst, pages_data, pages_total):
+def fragmentation_calculation(output: list, pages_inst: dict, pages_data: dict, pages_total: dict) -> None:
     pages = pages_inst.keys() | pages_data.keys()
     used_total = 0
     used_data = 0
@@ -63,9 +63,9 @@ def fragmentation_calculation(output, pages_inst, pages_data, pages_total):
         used_data += page_used_data
         used_instr += page_used_inst
 
-        page_instr_fragm = 100 - page_used_inst / 4096 * 100
-        page_data_fragm = 100 - page_used_data / 4096 * 100
-        page_total_fragm = 100 - page_used_total / 4096 * 100
+        page_instr_fragm = 100 - page_used_inst / PAGE_SIZE * 100
+        page_data_fragm = 100 - page_used_data / PAGE_SIZE * 100
+        page_total_fragm = 100 - page_used_total / PAGE_SIZE * 100
 
         if args.verbose:
             if page_instr_fragm < 100 and page_data_fragm < 100:
