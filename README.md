@@ -30,7 +30,7 @@ python *pintool_file_manipulation.py location* *pinatrace.out file location* -ar
 `
 
 argumenty:
-- `-v, --verbose` ku fragmentacii navyse vrati stranky, v ktorych sa pristupovalo aj k datam aj k instrukciam
+- `-b, --both` ku fragmentacii navyse vrati stranky, v ktorych sa pristupovalo aj k datam aj k instrukciam
 - `-d, --data` prida osobitnu fragmentaciu len pre data
 - `-i, --instr` prida fragmentaciu pre instrukcie
 - `-a, --all` zobrazi fragmentaciu pre vsetky stranky
