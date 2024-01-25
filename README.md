@@ -1,23 +1,27 @@
 # RP
 
-## Tool na kalkulaciu internej fragmentacie v pamati
+## Kalkulacia internej fragmentacie v pamati
 
 Toto je repo pre jeden z objektivov rocnikoveho projektu `Program na sledovanie a analyzu adries v pamati`\
-Sklada z 2 casti: pin tool a samotny skript na kalkulovanie fragmentacie
+Sklada sa z:
+- cpp program produkujuci .out subor s vyuzitim pin toolu
+- skript na kalkulovanie fragmentacie z logu
+- sample pinatrace.out subor
+  - tento subor obsahuje: `adresa velkost ip/addr`, kde ip=instrukcia, addr=data (?)
 
-### Pin tool
+### cpp program
 
-building the pin tool from `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))
+builduje sa z `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))
 ```
 make obj-intel64/pinatrace.so TARGET=intel64
 ```
-tento pin tool sa da nasledne spustit na dany program prikazom uvedenym nizsie a vytvori subor pinatrace.out, ktoreho spracovanie ma na starosti python script
+tento program sa da nasledne spustit na nejaky iny program prikazom uvedenym nizsie a vytvori subor pinatrace.out, ktoreho spracovanie ma na starosti python script
 
 `
-*pin tool location* -t pinatrace.so -- *target program location*
+*pin location* -t pinatrace.so -- *target program location*
 `
 
-### Interna fragmentacia
+### py - interna fragmentacia
 
 prikaz na spustenie:
 
