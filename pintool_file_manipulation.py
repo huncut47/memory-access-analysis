@@ -7,7 +7,7 @@ PAGE_SIZE = 4096
 
 parser = argparse.ArgumentParser(description='Fragmentation analysis tool')
 parser.add_argument('filename')
-parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
+parser.add_argument('-b', '--both', action='store_true', help='shows pages with data and instructions')
 parser.add_argument('-d', '--data', action='store_true', help='data fragmentation')
 parser.add_argument('-i', '--instr', action='store_true', help='instruction fragmentation')
 parser.add_argument('-a', '--all', action='store_true', help='fragmentation for all pages')
@@ -67,14 +67,14 @@ def fragmentation_calculation(output: list, pages_inst: dict, pages_data: dict, 
         page_data_fragm = 100 - page_used_data / PAGE_SIZE * 100
         page_total_fragm = 100 - page_used_total / PAGE_SIZE * 100
 
-        if args.verbose:
+        if args.both:
             if page_instr_fragm < 100 and page_data_fragm < 100:
                 output.append(f'{page_number:#x}: v stranke boli aj data aj instrukcie')
 
         if args.all:
             printline = f''
 
-            if args.verbose:
+            if args.both:
                 if page_instr_fragm < 100 and page_data_fragm < 100:
                     printline += f'! '
 
