@@ -1,14 +1,18 @@
 # Tool na kalkulaciu internej fragmentacie v pamati
 
+## Pin tool
+
 building the pin tool from `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))
 ```
 make obj-intel64/pinatrace.so TARGET=intel64
 ```
-tento pin tool sa da nasledne spustit na dany program prikazom
+tento pin tool sa da nasledne spustit na dany program prikazom uvedenym nizsie a vytvori subor pinatrace.txt, ktoreho spracovanie ma na starosti python script
 
 `
 *pin tool location* -t pinatrace.so -- *target program location*
 `
+
+## Interna fragmentacia
 
 prikaz na spustenie:
 
