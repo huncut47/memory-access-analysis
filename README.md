@@ -47,10 +47,10 @@ vrati
 Celkova Fragmentacia: 86.50%
 ```
 
-s pouzitim agrumentu verbose, data, instr:
+s pouzitim agrumentu both, data, instr:
 
 ```
-python pintool_file_manipulation.py pinatrace.out -vdi
+python pintool_file_manipulation.py pinatrace.out -bdi
 ```
 
 vrati
