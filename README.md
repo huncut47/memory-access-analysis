@@ -1,9 +1,11 @@
-# Tool na kalkulaciu internej fragmentacie v pamati
+# ...
+
+## Tool na kalkulaciu internej fragmentacie v pamati
 
 Toto je repo pre jeden z objektivov rocnikoveho projektu `Program na sledovanie a analyzu adries v pamati`\
 Sklada z 2 casti: pin tool a samotny skript na kalkulovanie fragmentacie
 
-## Pin tool
+### Pin tool
 
 building the pin tool from `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))
 ```
@@ -15,7 +17,7 @@ tento pin tool sa da nasledne spustit na dany program prikazom uvedenym nizsie a
 *pin tool location* -t pinatrace.so -- *target program location*
 `
 
-## Interna fragmentacia
+### Interna fragmentacia
 
 prikaz na spustenie:
 
