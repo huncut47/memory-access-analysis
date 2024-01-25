@@ -1,6 +1,6 @@
 # Tool na kalkulaciu internej fragmentacie v pamati
 
-building the pin tool from `pinatrace.cpp` (additional info je na stranke samotneho intel pin-toolu)
+building the pin tool from `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))
 ```
 make obj-intel64/pinatrace.so TARGET=intel64
 ```
