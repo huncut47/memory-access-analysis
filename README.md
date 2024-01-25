@@ -11,15 +11,23 @@ Sklada sa z:
 
 ### cpp program
 
-builduje sa z `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))
+builduje sa z `pinatrace.cpp` (additional info je na [stranke samotneho intel pin-toolu](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/index.html#BuildingExamples))\
+priklad:
 ```
 make obj-intel64/pinatrace.so TARGET=intel64
 ```
-tento program sa da nasledne spustit na nejaky iny program prikazom uvedenym nizsie a vytvori subor pinatrace.out, ktoreho spracovanie ma na starosti python script
+vytvori `pinatrace.so`; tento program sa da nasledne spustit na nejaky iny program prikazom uvedenym nizsie a vytvori subor pinatrace.out, ktoreho spracovanie ma na starosti python script
 
 `
 *pin location* -t pinatrace.so -- *target program location*
 `
+
+priklad:
+```
+pin -t pinatrace.so -- /bin/ls
+```
+
+vytvori file `pinatrace.out`
 
 ### py - interna fragmentacia
 
