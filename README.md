@@ -24,7 +24,7 @@ vytvori `pinatrace.so`; tento program sa da nasledne spustit na nejaky iny progr
 
 priklad:
 ```
-pin -t pinatrace.so -- /bin/ls
+./pin -t pinatrace.so -- /bin/ls
 ```
 
 vytvori file `pinatrace.out`
