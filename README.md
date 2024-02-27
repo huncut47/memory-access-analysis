@@ -31,6 +31,8 @@ vytvori file `pinatrace.out`
 
 ### py - interna fragmentacia
 
+Python verzia: 3.11.6 alebo vyssia
+
 prikaz na spustenie:
 
 `
