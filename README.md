@@ -71,3 +71,7 @@ Data Fragmentacia: 93.39%
 Celkova Fragmentacia: 86.50%
 0x561c7b184: v stranke boli aj data aj instrukcie
 ```
+
+### statistika.py
+TODO
+required python library: subprocess
