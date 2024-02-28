@@ -33,6 +33,8 @@ vytvori file `pinatrace.out`
 
 Python verzia: 3.11.6 alebo vyssia
 
+Potrebna kniznica: `argparse`
+
 prikaz na spustenie:
 
 `
