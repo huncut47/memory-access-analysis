@@ -5,12 +5,12 @@ FILE* trace;
 
 // Print a memory read record
 VOID RecordMemRead(VOID* ip, UINT32 insSize, UINT32 memOpSize, VOID* addr) {
-    fprintf(trace, "%p %u ip R\n%p %u addr R\n", ip, insSize, addr, memOpSize);
+    fprintf(trace, "%p %u ip\n%p %u addr R\n", ip, insSize, addr, memOpSize);
 }
 
 // Print a memory write record
 VOID RecordMemWrite(VOID* ip, UINT32 insSize, UINT32 memOpSize, VOID* addr) {
-    fprintf(trace, "%p %u ip W\n%p %u addr W\n", ip, insSize, addr, memOpSize);
+    fprintf(trace, "%p %u ip\n%p %u addr W\n", ip, insSize, addr, memOpSize);
 }
 
 // Print a memory read/write record
