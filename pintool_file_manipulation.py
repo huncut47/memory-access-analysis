@@ -58,7 +58,11 @@ def used_pages(file_location: str, pages_inst: dict[int, list[int]], pages_data:
                 pages_total[page_number][offset] = 1
 
     if args.verbose:
-        print(net)
+        for key, value in net.items():
+            print(key)
+            for k, v in value.items():
+                print(f'{k}: {v}')
+            print()
 
 def fragmentation_calculation(output: list[str], pages_inst: dict[int, list[int]], pages_data: dict[int, list[int]], pages_total: dict[int, list[int]]) -> None:
     pages = pages_inst.keys() | pages_data.keys()
